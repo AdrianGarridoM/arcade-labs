@@ -45,19 +45,14 @@ def draw_nieve(x,y):
 #/Nieve
     for i in range (len(x)):
         arcade.draw_circle_filled(x[i], y[i], 5, arcade.csscolor.SNOW)
-        coposy[i] -=10
-        if coposy[i]== 0:
-            coposy[i] = 800
-
-def on_draw(delta_time):
-    arcade.start_render()
-    draw_escenario()
-    draw_castillo()
-    draw_nieve(coposx, coposy)
 
 def main():
     arcade.set_background_color(arcade.csscolor.DARK_BLUE)
-    arcade.schedule(on_draw, 1 / 60)
+    arcade.start_render()
+    draw_escenario()
+    draw_castillo()
+    draw_nieve(coposx,coposy)
+    arcade.finish_render()
     arcade.run()
 
 
