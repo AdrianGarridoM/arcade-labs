@@ -1,6 +1,6 @@
 import arcade
 import random
-arcade.open_window(800, 800, "Sword in Stone")
+arcade.open_window(800, 800, " Castillo en Diciembre")
 coposx = []
 coposy= []
 
@@ -45,7 +45,7 @@ def draw_nieve(x,y):
 #/Nieve
     for i in range (len(x)):
         arcade.draw_circle_filled(x[i], y[i], 5, arcade.csscolor.SNOW)
-        coposy[i] -=4
+        coposy[i] -=10
         if coposy[i]== 0:
             coposy[i] = 800
 
