@@ -1,5 +1,7 @@
 import random
 
+miscellaneous = {'Thirst': 0, 'Camel tiredness': 0, }
+status = {'Canteens': 4, 'Miles traveled': 0, 'native distance': -20}
 
 def show_status():
     for k, v in status.items():
@@ -34,15 +36,20 @@ def drink_water():
     else:
         status['Canteens'] -= 1
         miscellaneous['Thirst'] = 0
+def find_oasis():
+    possibility = random.randint(0, 20)
+    chance = 1
+    if possibility == chance:
+        print("Congrats! You've found an Oasis")
+        status['Canteens'] = 4
+        miscellaneous ['Thirst'] = 0
+        miscellaneous ['Camel tiredness'] = 0
 
 
 print("Welcome to Camel!", )
 print("You have stolen a camel to make your way across the great Mobi desert.")
 print("The natives want their camel back and are chasing you down! Survive your")
 print("desert trek and outrun the natives.")
-""" Agua, cansancio, estamina camello, velocidad millas/h, millas recorridas"""
-miscellaneous = {'Thirst': 0, 'Camel tiredness': 0, }
-status = {'Canteens': 4, 'Miles traveled': 0, 'native distance': -20}
 
 
 def main():
@@ -66,8 +73,7 @@ def main():
         if status['Miles traveled'] >= 200:
             print("You have won!")
             done = True
-        
-
+        find_oasis()
         print("A. Drink from your canteen.")
         print("B. Ahead moderate speed.")
         print("C. Ahead full speed.")
