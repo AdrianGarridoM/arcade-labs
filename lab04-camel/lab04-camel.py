@@ -60,9 +60,9 @@ def main():
         if miscellaneous['Thirst'] == 6:
             print("you died of thirst")
             done = True
-        if miscellaneous['Camel tiredness'] >= 5
+        if miscellaneous['Camel tiredness'] >= 5:
             print("your camel is tired")
-        if miscellaneous['Camel tiredness'] >= 5
+        if miscellaneous['Camel tiredness'] >= 5:
             print("your camel is dead")
             done = True
         if status['native distance'] == status['Miles traveled']:
