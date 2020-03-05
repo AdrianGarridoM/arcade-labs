@@ -42,6 +42,23 @@ print("desert trek and outrun the natives.")
 def main():
     done = False
     while not done:
+        if miscellaneous['Thirst'] >= 4:
+            print("You are thirsty")
+        elif miscellaneous['Thirst'] == 6:
+            print("you died of thirst")
+            done = True
+        if miscellaneous['Camel tiredness'] >= 5:
+            print("your camel is tired")
+        elif miscellaneous['Camel tiredness'] >= 8:
+            print("your camel is dead")
+            done = True
+        if status['native distance'] >= status['Miles traveled']:
+            print("the natives have caught you")
+            done = True
+        elif status['Miles traveled'] >= 200:
+            done = True
+        elif (status['Miles traveled']- status['native distance']) <= 15:
+            print("The natives are getting close")
         print("A. Drink from your canteen.")
         print("B. Ahead moderate speed.")
         print("C. Ahead full speed.")
@@ -61,20 +78,6 @@ def main():
             moderate_speed()
         elif choice == "A":
             drink_water()
-        if miscellaneous['Thirst'] >= 4:
-            print("You are thirsty")
-        if miscellaneous['Thirst'] == 6:
-            print("you died of thirst")
-            done = True
-        if miscellaneous['Camel tiredness'] >= 5:
-            print("your camel is tired")
-        if miscellaneous['Camel tiredness'] >= 8:
-            print("your camel is dead")
-            done = True
-        if status['native distance'] >= status['Miles traveled']:
-            print("the natives have caught you")
-            done = True
-        if (status['Miles traveled']- status['native distance']) <= 15:
-            print("The natives are getting close")
+
 
 main()
