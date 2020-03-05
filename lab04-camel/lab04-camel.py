@@ -63,6 +63,10 @@ def main():
             done = True
         if (status['native distance'] - status['Miles traveled']) <= 15:
             print("The natives are getting close")
+        if status['Miles traveled'] >= 200:
+            print("You have won!")
+            done = True
+        
 
         print("A. Drink from your canteen.")
         print("B. Ahead moderate speed.")
