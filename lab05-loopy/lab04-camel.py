@@ -18,16 +18,19 @@ def draw_section_outlines():
 def draw_section_1():
     for row in range(30):
         for column in range(30):
-            x = column * 10
-            y = row * 10
-            arcade.draw_rectangle_filled(x+5, y+5, 5, 5, arcade.color.WHITE)
+            x = column * 10 + 5
+            y = row * 10 +5
+            arcade.draw_rectangle_filled(x, y, 5, 5, arcade.color.WHITE)
 
 
 def draw_section_2():
-    # Below, replace "pass" with your code for the loop.
-    # Use the modulus operator and an if statement to select the color
-    # Don't loop from 30 to 60 to shift everything over, just add 300 to x.
-    pass
+    for row in range(30):
+        for column in range(30):
+            x = column * 10 + 305
+            y = row * 10 + 5
+            arcade.draw_rectangle_filled(x, y, 5, 5, arcade.color.WHITE)
+            if column % 2 != 0:
+                arcade.draw_rectangle_filled(x, y, 5, 5, arcade.color.BLACK)
 
 
 def draw_section_3():
